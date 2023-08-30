@@ -1,19 +1,21 @@
 #!/bin/bash
 # とりあえずmacだけに対応(いずれはubuntuにも対応させたい)
 
+# venv用のファイルが存在するか確認する
+if [ ! -e ./*/pyvenv.cfg ]; then
+  exit
+fi
+
 # どのファイルがvenv用のファイルか確認
 # ディレクトリ一覧を取得(PWDを除く)
 venvfile=''
-dirs=`find ./ -type d -maxdepth 1 -not -path './'` 
+dirs=`find ./ -type d -maxdepth 1 -not \( -path './/.git' -o -path './' \)`
 for dir in $dirs
 do
   # それぞれのディレクトリに対してpyvenv.cfgがあるか確認
   if [ -e ./$dir/pyvenv.cfg ]; then
-    #echo "found at ${dir}"
-    venvfile=$dir
+    source $dir/bin/activate
   fi
 done
 
 
-# 存在すればsource ./envfile/bin/activateする
-source $venvfile/bin/activate
