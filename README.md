@@ -1,6 +1,6 @@
 # enac
 
-# HOW TO USE
+### HOW TO USE
 ```bash
 source enac
 ```
