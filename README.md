@@ -2,7 +2,7 @@
 
 ### Installation
 ```bash
-echo 'export alias enac='source enac''
+echo "alias enac='source enac'" >> ~/.zshrc
 ```
 
 ### HOW
