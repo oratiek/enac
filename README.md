@@ -6,8 +6,9 @@
 ```
 
 ### HOW
+run bellow command where venv file exists
 ```bash
-source enac
+enac
 ```
 
 
