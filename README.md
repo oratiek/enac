@@ -2,7 +2,7 @@
 
 ### Installation
 ```bash
-echo "alias enac='source enac'" >> ~/.zshrc
+./install.sh
 ```
 
 ### HOW
